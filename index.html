@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Big Sean Can't Yawn</title>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-1629113-29', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+	<style>
+		body {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			font-family: 'Fjalla One', Arial, sans-serif;
+			text-decoration: none;
+			background: url('bg.jpg');
+			background-repeat: repeat-x;
+			background-color: #000;
+		}
+		a {
+			text-decoration: none;
+			color: #000;
+		}
+		#sean {
+			width: 350px;
+			margin: 140px auto 0 auto;
+			z-index: 100;
+			transition: width 0.3s;
+			-webkit-animation: bob 5s infinite linear;
+    		-webkit-animation-iteration-count: infinite; 
+			-moz-animation: bob 5s infinite linear;
+    		-moz-animation-iteration-count: infinite; 
+		}
+		#bighead {
+			width: 100%;
+			cursor: pointer;
+			margin-top: 10%;
+			border-radius: 50%;
+			z-index: 100;
+			transition: margin-top 0.3s;
+			-webkit-animation: pulsate 2s infinite ease;
+    		-webkit-animation-iteration-count: infinite; 
+			-moz-animation: pulsate 2s infinite ease;
+    		-moz-animation-iteration-count: infinite; 
+		}
+		@-webkit-keyframes pulsate {
+    		0% {-webkit-transform: scale(1.0, 1.0); }
+    		50% {-webkit-transform: scale(1.1, 1.1); }
+    		100% {-webkit-transform: scale(1.0, 1.0); }
+		}
+		@-webkit-keyframes bob {
+    		0% {-webkit-transform: translateX(0px); }
+    		25% {-webkit-transform: translateX(20px); }
+    		50% {-webkit-transform: translateX(0px); }
+    		75% {-webkit-transform: translateX(-20px); }
+    		100% {-webkit-transform: translateX(0px); }
+		}
+		@-moz-keyframes pulsate {
+    		0% {-moz-transform: scale(1.0, 1.0); }
+    		50% {-moz-transform: scale(1.1, 1.1); }
+    		100% {-moz-transform: scale(1.0, 1.0); }
+		}
+		@-moz-keyframes bob {
+    		0% {-moz-transform: translateX(0px); }
+    		25% {-moz-transform: translateX(20px); }
+    		50% {-moz-transform: translateX(0px); }
+    		75% {-moz-transform: translateX(-20px); }
+    		100% {-moz-transform: translateX(0px); }
+		}
+		#error {
+			display: none;
+			width: 400px;
+			height: 200px;
+			background: url('error.jpg');
+			background-size: contain;
+			background-repeat: no-repeat;
+			border-radius: 2px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -200px;
+			margin-left: -200px;
+			font-family: arial, sans-serif;
+			z-index: 200;
+			transition: width 0.3s;
+		}
+		h1 {
+			font-size: 1.5em;
+			text-align: center;
+			margin-top: 40px;
+		}
+		#close{
+			position: absolute;
+			top: 12px;
+			right: 5px;
+			cursor: pointer;
+		}
+		#ok-button {
+			position: absolute;
+			bottom: 40px;
+			left: 50%;
+			margin-left: -50px;
+		}
+		#ok-button a {
+			text-decoration: none;
+			color: #fff;
+		}
+		.album-pic{
+			position: absolute;
+			left: 20px; 
+			bottom: 120px;
+			width: 160px;
+		}
+		.album-text{
+			position: absolute;
+			text-align: center;
+			left: 20px;
+			bottom: 30px;
+			width: 160px;
+			color: #fff;
+			font-size: 13px;
+			letter-spacing: 1px;
+		}
+		.score {
+			position: absolute;
+			bottom: 38px;
+			right: 30px;
+		}
+		.scorecard {
+			width: 280px;
+		}
+		.top-text{
+			position: absolute;
+			left: 50%;
+			top: 1%;
+			margin-left: -390px;
+		}
+		.logo{
+			width: 800px;
+			margin: 30px auto 0 auto;
+		}
+		.bottom-text {
+			color: #0c38c6;
+			text-align: center;
+			margin-top: 50px;
+			font-size: 1.3em;
+		}
+		@media screen and (max-width: 920px){
+			#sean {
+				width: 130px;
+			}
+			#bighead {
+				margin-top: -25%;
+				padding-left: 20px;
+			}
+			#error {
+				width: 310px;
+				top: 55%;
+				left: 63.5%;
+			}
+			#ok-button {
+				bottom: 65px;
+			}
+			#close{
+				top: 8px;
+			}
+			.top-text{
+				margin-left: -150px;
+				margin-top: 0px;
+			}
+			.logo {
+				width: 300px;
+			}
+			.album-pic{
+				left: 50%;
+				top: 525px;
+				margin-left: -80px;
+			}
+			.album-text{
+				left: 50%;
+				top: 700px;
+				margin-left: -80px;
+			}
+			.bottom-text {
+				margin-top: 50px;
+			}
+			.score {
+				top: 370px;
+				left: 50%;
+				margin-left: -100px;
+			}
+			.scorecard {
+				width: 200px;
+			}
+			@-webkit-keyframes bob {
+	    		0% {-webkit-transform: translateX(0px); }
+	    		25% {-webkit-transform: translateX(20px); }
+	    		50% {-webkit-transform: translateX(0px); }
+	    		75% {-webkit-transform: translateX(-50px); }
+	    		100% {-webkit-transform: translateX(0px); }
+			}
+			@-moz-keyframes bob {
+	    		0% {-moz-transform: translateX(0px); }
+	    		25% {-moz-transform: translateX(20px); }
+	    		50% {-moz-transform: translateX(0px); }
+	    		75% {-moz-transform: translateX(-50px); }
+	    		100% {-moz-transform: translateX(0px); }
+			}
+		}
+	</style>
+	<link rel="shortcut icon" href="favicon.ico">
+	<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+	<script src="//use.typekit.net/hos2pfp.js"></script>
+	<script src="fastclick.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+</head>
+<body>
+	<div class="top-text"><img src="logo.png" alt="seancantyawn.com" class="logo"></div>
+	<div id="sean">
+		<img src="sean.gif" id="bighead">
+	</div>
+
+	<div id="error">
+		<div id="close"><img src="x-button.jpg"></div>
+		<a href="http://funnyordie.com">
+			<div id="ok-button">
+				<img src="ok-button.jpg">
+			</div>
+		</a>
+	</div>
+
+	<div class="bottom-text">CLICK BIG SEAN TO MAKE HIM YAWN</div>
+
+	<div class="score">
+		<img src="score.png" alt="scorecard"  class="scorecard">
+	</div>
+
+	<a href="https://itunes.apple.com/us/album/dark-sky-paradise-deluxe/id963397688" target="_blank" class="album">
+		<img src="sean-album.png" class="album-pic" style="">
+	</a>
+
+	<div class="album-text">
+		Click this lion pendant to hear Big Sean's<br> new album, <br>Dark Sky Paradise
+	</div>
+
+	<audio id="playme">
+  		<source src="bigsean_ohgod.ogg" type="audio/ogg">
+			Your browser does not support the audio element.
+	</audio>
+
+	<script>
+		document.getElementById('bighead').addEventListener('click', function(){
+			document.getElementById('error').style.display = 'block';
+			document.getElementById('playme').play();
+		}, false);
+		document.getElementById('close').addEventListener('click', function(){
+			document.getElementById('error').style.display = 'none';
+		}, false);
+		$(function() {
+    		$( "#sean" ).draggable();
+  		});
+  		$(function() {
+    		FastClick.attach(document.body);
+		});
+	</script>
+</body>
+</html>
